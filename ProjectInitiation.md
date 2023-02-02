@@ -25,10 +25,33 @@ additionally, we will be working on misclanious issues on the github repository 
 Having an architecture diagram showing the key components that you will be building is an important part of this section.  This diagram will evolve over the project as more details emerge, but having it here is a good way to drive clarity. -->
 
 ## High Level Project Plan
-
+In our meetings with our mentors for this project, we were all able to figure out the key milestones for the starting point of this project: our first milestone would be learning the computer language rust and our second milestone is to be able to contribute our code to Kata wherever they need us. In depth, Kata Containers is looking for our team to help contribute code to their projects that will help translate their code to Rust and revamping Kata docs. We were given a timeline that they calculated to help us keep on track, which helps give us an idea what our first and second key milestones will be. For our first milestone, for four weeks of this project, we are to solely learn and code with Rust. In our first and second meeting, our mentors had given us resources and advice to better learn and understand the language, as many of us were not familiar with the language. The four weeks gives us time to not only learn, but be able to ask questions to our mentors for them to clarify and help us understand if we had any questions. During the four weeks, we are to setup a linux environment and download Kata to start working with the kata containers. Another part of the first milestone is to write our first one-liner PR. This one-liner PR is to check if git was configured correctly and get in contact wiht the PR reviewers.
+ 
+For the second milestone, after having kata downloaded and git configured, we are to start writing and making more significant contributions to their code. Currently, Kata is looking for our team to help contribute code to Kata-CTL, which will be written in the Rust language. Kata-Ctl will be the successor of Kata-runtime, a utility, where it will be converted to the rust language. This is mainly what Kata Containers would like from our team to contribute.
 <!-- Break the project down into the two key milestones as a starting point for the project.  This will evolve as the project goes, so don’t expect things to go as planned.  One important concept for Dev Phase 1 is the ‘steel thread’ that will demonstrate some part of the project in an end to end fashion.  Users and user stories can be introduced here to identify the high priority scenarios for the project.  Map these into Dev Phase 1 and Dev Phase 2. -->
 
 ## Technology Requirements
+Due to Kata being a Linux and VM based project, building and testing the software that we are writing will require access to a Linux development environment for all team members.
+In previous years, this was not a problem, as everyone in the team had personal linux machines.
+However, this year, only one team member has a pre-existing linux machine.
+Two other team members have desktops at home and are willing to dual boot from an internal drive.
+
+However, the final two team members only own laptops, and are not able to dual boot.
+Unfortunately, the university provided VM's are unsuitable for the tasks, as they themselves are virtual machines, and do not have nested virtualization availible.
+This leaves us with two options.
+
+First, we could directly provide two development laptops to the team members.
+These machines need not be very high spec, 4-8gb of ram and any cpu after around 2015 should work well.
+This is the preferred solution.
+
+Secondly, we could have a server running that both team members (or potentially all of us) can remote into, via ssh or remote desktop.
+The server would need to either be running on bare metal, or support nested virtualization.
+Additonally, certan permissions may be required, at the very least permission to create and manage virtual machines, and potentially up to root acess.
+The machine would also require a network connection to the outside world, including the ability for use to remote in from off the NDSU network.
+The server would need at least 1 core per user, and at least 4gb of ram per user.
+
+The first option is certanly more ideal, but the second option will be easier to pitch to IT, as they retain physical control of the hardware. (on the other hand, they may be a bit uppity about us having root acess to a device that is visible to the outside.)
+
 
 <!-- This section should indicate what technology frameworks are required for the project by the client.  This would include things like the use of cloud computing from a specific company, frameworks like .Net or React, programming languages, emulators, test frameworks, etc.  It’s important to highlight any client requirements that the project team doesn’t have access to directly.  Are there subscriptions or licenses required?  Suggested training for the technology requirements should also be considered. -->
 
